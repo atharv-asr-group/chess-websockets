@@ -34,8 +34,8 @@ class GameManager {
             if (message.type == messages_1.MOVE) {
                 const game = this.games.find(game => game.player1 == socket || game.player2 === socket);
                 if (game) {
-                    console.log('this is the move, ', message.move);
-                    game.makeMove(socket, message.move);
+                    console.log('this is the move, ', message.payload.move);
+                    game.makeMove(socket, message.payload.move);
                 }
             }
         });

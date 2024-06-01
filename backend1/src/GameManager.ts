@@ -44,7 +44,7 @@ export class GameManager{
                 if(game){
                     console.log('this is the move, ', message.move)
 
-                    game.makeMove(socket, message.move);
+                    game.makeMove(socket, message.payload.move);
                 }
             }
         })
